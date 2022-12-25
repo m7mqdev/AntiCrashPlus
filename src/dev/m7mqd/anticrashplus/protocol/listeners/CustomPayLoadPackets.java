@@ -31,7 +31,7 @@ extends PacketAdapter {
                         || PacketType.equalsIgnoreCase("MC|BEdit")
                         || PacketType.equalsIgnoreCase("MC|BOpen")
         ) {
-            takeActions(event, plugin, player, CrashType.CustomPayLoad);
+            takeActions(event, plugin, player, CrashType.CUSTOM_PAY_LOAD);
             return;
         }
         if(((ByteBuf)event.getPacket().getModifier().getValues().get(1)).capacity() > ConfigurationSettings.getPacketsLimit()) {
