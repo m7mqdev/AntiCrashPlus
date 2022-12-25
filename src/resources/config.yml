@@ -1,0 +1,33 @@
+# AntiCrashPlus (0.3)
+# Author: M7mqD
+# The color codes works fine in the configuration messages.
+# Permissions:
+# - anticrashplus.alert: The player who has this permission will be able to take the alerts from the plugin.
+# - anticrashplus.reload: The player who has this permission will be able to reload the plugin.
+# The placeholders you can use here are:
+# %crasher%: the player who is trying to crash the server
+# %player%: the player who is receiving the alert message
+# %method%: the method that is used to crash the server
+# %prefix%: the prefix.
+# %nl%, %newline%: To start a new line.
+# * VERY IMPORTANT NOTE:
+# * placeholders are case-sensitive so if you wrote %pReFiX% for example, it won't be replaced with the prefix in the config,
+# * this is applied for all placeholders!
+# The configuration starts:
+
+prefix: "&8[&e&lAntiCrash&f&l+&8] "
+crash-alert-message: "%prefix% &4%crasher% &cfailed to use: &f%method%."
+crash-kick-message: "%nl% %prefix% %nl% &cYou have been kicked for trying to crash %nl% &8&m--------------------"
+command-no-permission-message: "%prefix% &cYou do not have permission: &e(anticrashplus.reload)&c to use this command."
+
+# The CustomPayLoad packets spam will cause lag so the best limit for that is 5000-8000.
+
+packets-limit: 8000
+packets-limit-kick-message: "%prefix% %nl% &cYou are sending too many packets %nl% &a&nPlease rejoin."
+packets-limit-alert-message: "%prefix% &c%crasher% has reached the maximum size of packets."
+
+# Any message contain the strings from the list will NOT be sent to the console.
+
+console-ignored-messages:
+- "What ever do you want to cancel printing in the console."
+- "What ever do you want to cancel printing in the console 2.."

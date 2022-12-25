@@ -1,0 +1,13 @@
+name: AntiCrashPlus
+main: dev.m7mqd.anticrashplus.AntiCrashPlusPlugin
+author: M7mqD
+website: https://github.com/77mod
+version: 0.4
+depend: [ProtocolLib]
+commands:
+  AntiCrashPlus:
+    aliases:
+      - anticrash+
+      - anticrash
+      - crashprotection
+      - anticrasher
